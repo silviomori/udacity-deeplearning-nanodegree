@@ -1,1 +1,6 @@
-.ipynb_checkpoints
+*-checkpoint.ipynb
+intro-to-pytorch/__pycache__/
+intro-to-pytorch/Cat_Dog_data/
+convolutional-neural-networks/cifar-cnn/data/
+convolutional-neural-networks/cifar-cnn/model_cifar.pt
+transfer-learning/flower_photos/
