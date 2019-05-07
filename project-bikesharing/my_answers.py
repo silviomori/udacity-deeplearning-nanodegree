@@ -98,9 +98,9 @@ class NeuralNetwork(object):
         hidden_error_term = hidden_error * hidden_outputs * (1 - hidden_outputs)
         
         # Weight step (input to hidden)
-        delta_weights_i_h += X.reshape(3,1) * hidden_error_term
+        delta_weights_i_h += X.reshape(-1,1) * hidden_error_term
         # Weight step (hidden to output)
-        delta_weights_h_o += hidden_outputs.reshape(2,1) * output_error_term
+        delta_weights_h_o += hidden_outputs.reshape(-1,1) * output_error_term
 
         return delta_weights_i_h, delta_weights_h_o
 
@@ -142,7 +142,7 @@ class NeuralNetwork(object):
 #########################################################
 # Set your hyperparameters here
 ##########################################################
-iterations = 100
-learning_rate = 0.1
-hidden_nodes = 2
+iterations = 7000
+learning_rate = 0.5
+hidden_nodes = 6
 output_nodes = 1
